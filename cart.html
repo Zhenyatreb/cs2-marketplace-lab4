@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кошик — CS2 Market</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<header class="site-header">
+    <div class="header-inner">
+        <a class="logo" href="index.html"><span>CS2</span> MARKET</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation">☰ Меню</button>
+        <nav id="main-navigation" class="nav" aria-label="Головна навігація">
+            <a href="index.html">Каталог</a>
+            <a href="cabinet.html">Кабінет</a>
+            <a href="balance.html">Баланс</a>
+            <a href="wishlist.html">Обране</a>
+            <a href="cart.html" class="active">Кошик</a>
+            <a href="history.html">Історія</a>
+            <a href="login.html">Вхід</a>
+        </nav>
+    </div>
+</header>
+<main>
+<h1 class="page-title">Кошик</h1>
+<p class="page-description">Предмети, які ти додав до замовлення.</p>
+<div class="layout cart-layout">
+    <section>
+        <article class="panel cart-item"><a class="product-image" href="product.html"><img src="assets/ak47-redline.jpeg" alt="AK-47 | Redline"></a><div class="cart-details"><h2 class="product-name">AK-47 | Redline</h2><p class="muted">Field-Tested · Float 0.25</p><strong>$24.50</strong></div><a class="button button-secondary button-small" href="index.html">Видалити</a></article>
+<article class="panel cart-item"><a class="product-image" href="product.html"><img src="assets/awp-asiimov.jpg" alt="AWP | Asiimov"></a><div class="cart-details"><h2 class="product-name">AWP | Asiimov</h2><p class="muted">Field-Tested · Float 0.27</p><strong>$118.00</strong></div><a class="button button-secondary button-small" href="index.html">Видалити</a></article>
+<article class="panel cart-item"><a class="product-image" href="product.html"><img src="assets/m4-printstream.webp" alt="M4A1-S | Printstream"></a><div class="cart-details"><h2 class="product-name">M4A1-S | Printstream</h2><p class="muted">Factory New · Float 0.02</p><strong>$245.00</strong></div><a class="button button-secondary button-small" href="index.html">Видалити</a></article>
+    </section>
+    <aside class="panel">
+        <h2>Підсумок замовлення</h2>
+        <div class="total-row"><span class="muted">Товарів</span><strong>3</strong></div>
+        <div class="total-row"><span class="muted">Сума товарів</span><strong>$387.50</strong></div>
+        <div class="total-row"><span class="muted">Доставка</span><strong>$0.00</strong></div>
+        <div class="total-row"><strong>До сплати</strong><strong>$387.50</strong></div>
+        <p></p><a class="button full-width" href="login.html">Оформити замовлення</a>
+    </aside>
+</div>
+<p><a class="button button-secondary" href="index.html">← Повернутися до каталогу</a></p>
+</main>
+<footer class="site-footer">CS2 Market · Маркетплейс скінів Counter-Strike 2</footer>
+</body>
+</html>

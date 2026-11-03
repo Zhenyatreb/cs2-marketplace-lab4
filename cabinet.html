@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Особистий кабінет — CS2 Market</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<header class="site-header">
+    <div class="header-inner">
+        <a class="logo" href="index.html"><span>CS2</span> MARKET</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation">☰ Меню</button>
+        <nav id="main-navigation" class="nav" aria-label="Головна навігація">
+            <a href="index.html">Каталог</a>
+            <a href="cabinet.html" class="active">Кабінет</a>
+            <a href="balance.html">Баланс</a>
+            <a href="wishlist.html">Обране</a>
+            <a href="cart.html">Кошик</a>
+            <a href="history.html">Історія</a>
+            <a href="login.html">Вхід</a>
+        </nav>
+    </div>
+</header>
+<main>
+<h1 class="page-title">Особистий кабінет</h1>
+<p class="page-description">Інвентар та виставлення предметів на продаж.</p>
+<div class="toolbar">
+    <nav class="nav" aria-label="Розділи особистого кабінету">
+        <a class="active" href="cabinet.html">Інвентар</a><a href="balance.html">Баланс</a><a href="wishlist.html">Обране</a><a href="history.html">Історія транзакцій</a>
+    </nav>
+</div>
+<section class="panel" style="margin-bottom:20px">
+    <h2>Посилання на обмін Steam</h2>
+    <p class="muted">Додай посилання на обмін Steam, щоб підготувати предмети до продажу.</p>
+    <div class="form-row"><input type="url" placeholder="https://steamcommunity.com/tradeoffer/new/..." aria-label="Trade URL"><button type="button" class="button">Зберегти URL</button></div>
+</section>
+<div class="layout cabinet-layout">
+    <section>
+        <div class="toolbar"><h2>Інвентар Steam</h2><span class="muted">6 предметів</span></div>
+        <div class="product-grid"><article class="card">
+    <a class="product-image" href="product.html" aria-label="Переглянути AK-47 | Redline"><img src="assets/ak47-redline.jpeg" alt="Зображення AK-47 | Redline"></a>
+    <h3 class="product-name"><a href="product.html">AK-47 | Redline</a></h3>
+    <p class="muted">Field-Tested · Float 0.25</p>
+    <span class="price">$24.50</span>
+    <div class="card-actions">
+        <a class="button button-small" href="product.html">Обрати</a>
+        <a class="button button-secondary button-small" href="wishlist.html">♡</a>
+    </div>
+</article>
+<article class="card">
+    <a class="product-image" href="product.html" aria-label="Переглянути AWP | Asiimov"><img src="assets/awp-asiimov.jpg" alt="Зображення AWP | Asiimov"></a>
+    <h3 class="product-name"><a href="product.html">AWP | Asiimov</a></h3>
+    <p class="muted">Field-Tested · Float 0.27</p>
+    <span class="price">$118.00</span>
+    <div class="card-actions">
+        <a class="button button-small" href="product.html">Обрати</a>
+        <a class="button button-secondary button-small" href="wishlist.html">♡</a>
+    </div>
+</article>
+<article class="card">
+    <a class="product-image" href="product.html" aria-label="Переглянути M4A1-S | Printstream"><img src="assets/m4-printstream.webp" alt="Зображення M4A1-S | Printstream"></a>
+    <h3 class="product-name"><a href="product.html">M4A1-S | Printstream</a></h3>
+    <p class="muted">Factory New · Float 0.02</p>
+    <span class="price">$245.00</span>
+    <div class="card-actions">
+        <a class="button button-small" href="product.html">Обрати</a>
+        <a class="button button-secondary button-small" href="wishlist.html">♡</a>
+    </div>
+</article>
+<article class="card">
+    <a class="product-image" href="product.html" aria-label="Переглянути USP-S | Cortex"><img src="assets/usp-cortex.webp" alt="Зображення USP-S | Cortex"></a>
+    <h3 class="product-name"><a href="product.html">USP-S | Cortex</a></h3>
+    <p class="muted">Minimal Wear · Float 0.08</p>
+    <span class="price">$8.40</span>
+    <div class="card-actions">
+        <a class="button button-small" href="product.html">Обрати</a>
+        <a class="button button-secondary button-small" href="wishlist.html">♡</a>
+    </div>
+</article>
+<article class="card">
+    <a class="product-image" href="product.html" aria-label="Переглянути Glock-18 | Water Elemental"><img src="assets/glock-water.jpg" alt="Зображення Glock-18 | Water Elemental"></a>
+    <h3 class="product-name"><a href="product.html">Glock-18 | Water Elemental</a></h3>
+    <p class="muted">Minimal Wear · Float 0.10</p>
+    <span class="price">$6.75</span>
+    <div class="card-actions">
+        <a class="button button-small" href="product.html">Обрати</a>
+        <a class="button button-secondary button-small" href="wishlist.html">♡</a>
+    </div>
+</article>
+<article class="card">
+    <a class="product-image" href="product.html" aria-label="Переглянути Desert Eagle | Mecha Industries"><img src="assets/deagle-mecha.jpg" alt="Зображення Desert Eagle | Mecha Industries"></a>
+    <h3 class="product-name"><a href="product.html">Desert Eagle | Mecha Industries</a></h3>
+    <p class="muted">Field-Tested · Float 0.22</p>
+    <span class="price">$12.80</span>
+    <div class="card-actions">
+        <a class="button button-small" href="product.html">Обрати</a>
+        <a class="button button-secondary button-small" href="wishlist.html">♡</a>
+    </div>
+</article></div>
+    </section>
+    <aside class="panel">
+        <h2>Виставити на продаж</h2>
+        <div class="filter-group"><label for="item">Предмет</label><select id="item"><option>AK-47 | Redline</option><option>AWP | Asiimov</option><option>USP-S | Cortex</option></select></div>
+        <div class="filter-group"><label for="sell-price">Ціна, $</label><input id="sell-price" type="number" placeholder="24.50"></div>
+        <button type="button" class="button full-width">Виставити предмет</button>
+        <p class="muted">Перевір назву предмета та ціну перед виставленням.</p>
+    </aside>
+</div>
+</main>
+<footer class="site-footer">CS2 Market · Маркетплейс скінів Counter-Strike 2</footer>
+</body>
+</html>

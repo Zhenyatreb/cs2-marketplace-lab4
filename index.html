@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог — CS2 Market</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<header class="site-header">
+    <div class="header-inner">
+        <a class="logo" href="index.html" class="active"><span>CS2</span> MARKET</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation">☰ Меню</button>
+        <nav id="main-navigation" class="nav" aria-label="Головна навігація">
+            <a href="index.html" class="active">Каталог</a>
+            <a href="cabinet.html">Кабінет</a>
+            <a href="balance.html">Баланс</a>
+            <a href="wishlist.html">Обране</a>
+            <a href="cart.html">Кошик</a>
+            <a href="history.html">Історія</a>
+            <a href="login.html">Вхід</a>
+        </nav>
+    </div>
+</header>
+<main>
+<h1 class="page-title">Каталог скінів</h1>
+<p class="page-description">Знайди предмет для своєї колекції або гри.</p>
+<div class="layout">
+    <aside class="panel">
+        <h2>Фільтри</h2>
+        <form id="catalog-filter">
+            <div class="filter-group">
+                <label for="search">Пошук за назвою</label>
+                <input id="search" type="search" placeholder="Наприклад, AK-47">
+            </div>
+            <div class="filter-group">
+                <label for="weapon">Тип зброї</label>
+                <select id="weapon"><option value="all">Усі типи</option><option value="rifle">Гвинтівки</option><option value="sniper">Снайперські гвинтівки</option><option value="pistol">Пістолети</option></select>
+            </div>
+            <div class="filter-group">
+                <label>Ціна, $</label>
+                <div class="form-row"><input id="min-price" type="number" min="0" placeholder="Від" aria-label="Мінімальна ціна"><input id="max-price" type="number" min="0" placeholder="До" aria-label="Максимальна ціна"></div>
+            </div>
+            <div class="filter-group">
+                <label for="quality">Стан предмета</label>
+                <select id="quality"><option value="all">Будь-який</option><option value="Factory New">Factory New</option><option value="Minimal Wear">Minimal Wear</option><option value="Field-Tested">Field-Tested</option></select>
+            </div>
+            <button class="button full-width" type="submit">Застосувати фільтри</button>
+            <button class="button button-secondary full-width" type="reset" style="margin-top:8px">Очистити</button>
+        </form>
+    </aside>
+    <section>
+        <div class="toolbar"><h2>Популярні предмети</h2><span class="muted" id="products-count">6 товарів</span></div>
+        <div class="product-grid" id="catalog-products">
+            <article class="card" data-name="AK-47 | Redline" data-weapon="rifle" data-price="24.50" data-quality="Field-Tested">
+    <a class="product-image" href="product.html" aria-label="Переглянути AK-47 | Redline"><img src="assets/ak47-redline.jpeg" alt="Зображення AK-47 | Redline"></a>
+    <h3 class="product-name"><a href="product.html">AK-47 | Redline</a></h3>
+    <p class="muted">Field-Tested · Float 0.25</p>
+    <span class="price">$24.50</span>
+    <div class="card-actions">
+        <a class="button button-small" href="cart.html">Купити</a>
+        <a class="button button-secondary button-small" href="wishlist.html">♡</a>
+    </div>
+</article>
+<article class="card" data-name="AWP | Asiimov" data-weapon="sniper" data-price="118.00" data-quality="Field-Tested">
+    <a class="product-image" href="product.html" aria-label="Переглянути AWP | Asiimov"><img src="assets/awp-asiimov.jpg" alt="Зображення AWP | Asiimov"></a>
+    <h3 class="product-name"><a href="product.html">AWP | Asiimov</a></h3>
+    <p class="muted">Field-Tested · Float 0.27</p>
+    <span class="price">$118.00</span>
+    <div class="card-actions">
+        <a class="button button-small" href="cart.html">Купити</a>
+        <a class="button button-secondary button-small" href="wishlist.html">♡</a>
+    </div>
+</article>
+<article class="card" data-name="M4A1-S | Printstream" data-weapon="rifle" data-price="245.00" data-quality="Factory New">
+    <a class="product-image" href="product.html" aria-label="Переглянути M4A1-S | Printstream"><img src="assets/m4-printstream.webp" alt="Зображення M4A1-S | Printstream"></a>
+    <h3 class="product-name"><a href="product.html">M4A1-S | Printstream</a></h3>
+    <p class="muted">Factory New · Float 0.02</p>
+    <span class="price">$245.00</span>
+    <div class="card-actions">
+        <a class="button button-small" href="cart.html">Купити</a>
+        <a class="button button-secondary button-small" href="wishlist.html">♡</a>
+    </div>
+</article>
+<article class="card" data-name="USP-S | Cortex" data-weapon="pistol" data-price="8.40" data-quality="Minimal Wear">
+    <a class="product-image" href="product.html" aria-label="Переглянути USP-S | Cortex"><img src="assets/usp-cortex.webp" alt="Зображення USP-S | Cortex"></a>
+    <h3 class="product-name"><a href="product.html">USP-S | Cortex</a></h3>
+    <p class="muted">Minimal Wear · Float 0.08</p>
+    <span class="price">$8.40</span>
+    <div class="card-actions">
+        <a class="button button-small" href="cart.html">Купити</a>
+        <a class="button button-secondary button-small" href="wishlist.html">♡</a>
+    </div>
+</article>
+<article class="card" data-name="Glock-18 | Water Elemental" data-weapon="pistol" data-price="6.75" data-quality="Minimal Wear">
+    <a class="product-image" href="product.html" aria-label="Переглянути Glock-18 | Water Elemental"><img src="assets/glock-water.jpg" alt="Зображення Glock-18 | Water Elemental"></a>
+    <h3 class="product-name"><a href="product.html">Glock-18 | Water Elemental</a></h3>
+    <p class="muted">Minimal Wear · Float 0.10</p>
+    <span class="price">$6.75</span>
+    <div class="card-actions">
+        <a class="button button-small" href="cart.html">Купити</a>
+        <a class="button button-secondary button-small" href="wishlist.html">♡</a>
+    </div>
+</article>
+<article class="card" data-name="Desert Eagle | Mecha Industries" data-weapon="pistol" data-price="12.80" data-quality="Field-Tested">
+    <a class="product-image" href="product.html" aria-label="Переглянути Desert Eagle | Mecha Industries"><img src="assets/deagle-mecha.jpg" alt="Зображення Desert Eagle | Mecha Industries"></a>
+    <h3 class="product-name"><a href="product.html">Desert Eagle | Mecha Industries</a></h3>
+    <p class="muted">Field-Tested · Float 0.22</p>
+    <span class="price">$12.80</span>
+    <div class="card-actions">
+        <a class="button button-small" href="cart.html">Купити</a>
+        <a class="button button-secondary button-small" href="wishlist.html">♡</a>
+    </div>
+</article>
+        </div>
+    </section>
+</div>
+</main>
+<footer class="site-footer">CS2 Market · Маркетплейс скінів Counter-Strike 2</footer>
+</body>
+</html>

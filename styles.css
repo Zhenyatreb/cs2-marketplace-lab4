@@ -1,0 +1,533 @@
+/* Основні кольори сайту */
+:root {
+    --background: #111b29;
+    --panel: #1c2a3b;
+    --panel-light: #26374a;
+    --text: #f2f4f7;
+    --muted: #aab6c5;
+    --accent: #f1b33e;
+    --border: #34465a;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--background);
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.site-header {
+    background: #172333;
+    border-bottom: 1px solid var(--border);
+}
+
+.header-inner {
+    width: min(1180px, 94%);
+    margin: 0 auto;
+    padding: 14px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+}
+
+.logo {
+    font-weight: bold;
+    letter-spacing: .5px;
+    white-space: nowrap;
+}
+
+.logo span {
+    color: var(--accent);
+}
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+    font-size: 14px;
+}
+
+.menu-toggle {
+    display: none;
+    padding: 8px 12px;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    background: var(--panel-light);
+    color: var(--text);
+    font: inherit;
+    cursor: pointer;
+}
+
+.nav a {
+    color: var(--muted);
+}
+
+.nav a:hover,
+.nav a.active {
+    color: var(--accent);
+}
+
+main {
+    width: min(1180px, 94%);
+    margin: 28px auto 40px;
+    min-height: 65vh;
+}
+
+.page-title {
+    margin: 0 0 6px;
+    font-size: 28px;
+}
+
+.page-description {
+    margin: 0 0 22px;
+    color: var(--muted);
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+.panel,
+.card,
+.stat {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 7px;
+}
+
+.panel {
+    padding: 18px;
+}
+
+.cart-layout {
+    grid-template-columns: minmax(0, 1fr) 300px;
+}
+
+/* Окремий макет кабінету: інвентар більше не стискається до вузьких колонок. */
+.cabinet-layout {
+    grid-template-columns: minmax(0, 1.15fr) minmax(300px, 1fr);
+}
+
+.panel h2,
+.panel h3 {
+    margin-top: 0;
+}
+
+.filter-group {
+    margin-bottom: 18px;
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    background: #142131;
+    color: var(--text);
+    font: inherit;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #8290a1;
+}
+
+.form-row {
+    display: flex;
+    gap: 10px;
+}
+
+.form-row > * {
+    min-width: 0;
+    flex: 1;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 14px;
+    border: 0;
+    border-radius: 5px;
+    background: var(--accent);
+    color: #1d2630;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+}
+
+.button:hover {
+    filter: brightness(1.06);
+}
+
+.button-secondary {
+    background: var(--panel-light);
+    border: 1px solid var(--border);
+    color: var(--text);
+}
+
+.button-small {
+    padding: 7px 10px;
+    font-size: 13px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.card {
+    padding: 12px;
+    min-width: 0;
+}
+
+.product-image {
+    height: 125px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #111c2a;
+    border-radius: 5px;
+    margin-bottom: 12px;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.product-name {
+    margin: 0 0 4px;
+    font-size: 16px;
+}
+
+.muted {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.price {
+    display: block;
+    margin: 10px 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.card-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+.card-actions .button {
+    flex: 1;
+}
+
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.toolbar h2 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.two-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.stat {
+    padding: 15px;
+}
+
+.stat p {
+    margin: 0 0 5px;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.stat strong {
+    font-size: 22px;
+}
+
+.detail-layout {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 22px;
+}
+
+.detail-image {
+    min-height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 7px;
+}
+
+.detail-image img {
+    max-height: 300px;
+    width: 100%;
+    object-fit: contain;
+}
+
+.detail-list {
+    padding: 0;
+    list-style: none;
+}
+
+.detail-list li {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.table-wrap {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--panel);
+}
+
+th,
+td {
+    padding: 12px;
+    border-bottom: 1px solid var(--border);
+    text-align: left;
+    white-space: nowrap;
+}
+
+th {
+    color: var(--muted);
+    font-weight: normal;
+    font-size: 13px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 12px;
+}
+
+.cart-item .product-image {
+    width: 110px;
+    min-width: 110px;
+    height: 75px;
+    margin: 0;
+}
+
+.cart-details {
+    flex: 1;
+}
+
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.full-width {
+    width: 100%;
+}
+
+.login-box {
+    max-width: 430px;
+    margin: 45px auto;
+    padding: 28px;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.login-box .filter-group {
+    text-align: left;
+}
+
+.steam-mark {
+    display: flex;
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 14px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #26374a;
+    color: var(--accent);
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.steam-button {
+    margin-top: 4px;
+}
+
+.note {
+    margin-top: 16px;
+    padding: 12px;
+    background: #223247;
+    border-left: 3px solid var(--accent);
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.form-message {
+    min-height: 20px;
+    margin: 12px 0 0;
+    font-size: 13px;
+}
+
+.form-message.error {
+    color: #ff8585;
+}
+
+.form-message.success {
+    color: #86d49b;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+.site-footer {
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 12px;
+    padding: 18px 3%;
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    .header-inner {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .layout,
+    .cart-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .header-inner {
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-left: auto;
+    }
+
+    .site-header .nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+        padding-top: 8px;
+    }
+
+    .site-header .nav.nav-open {
+        display: flex;
+    }
+
+    .site-header .nav a {
+        padding: 5px 0;
+    }
+
+    main {
+        margin-top: 20px;
+    }
+
+    .page-title {
+        font-size: 23px;
+    }
+
+    .nav {
+        gap: 8px 12px;
+    }
+
+    .product-grid,
+    .two-columns,
+    .stats,
+    .detail-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .product-image {
+        height: 155px;
+    }
+
+    .toolbar {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+
+    .login-box {
+        margin: 20px auto;
+        padding: 20px;
+    }
+}

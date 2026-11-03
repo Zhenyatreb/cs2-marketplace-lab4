@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Баланс — CS2 Market</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<header class="site-header">
+    <div class="header-inner">
+        <a class="logo" href="index.html"><span>CS2</span> MARKET</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation">☰ Меню</button>
+        <nav id="main-navigation" class="nav" aria-label="Головна навігація">
+            <a href="index.html">Каталог</a>
+            <a href="cabinet.html">Кабінет</a>
+            <a href="balance.html" class="active">Баланс</a>
+            <a href="wishlist.html">Обране</a>
+            <a href="cart.html">Кошик</a>
+            <a href="history.html">Історія</a>
+            <a href="login.html">Вхід</a>
+        </nav>
+    </div>
+</header>
+<main>
+<h1 class="page-title">Баланс</h1>
+<p class="page-description">Керування коштами особистого кабінету.</p>
+<div class="stats">
+    <div class="stat"><p>Доступний баланс</p><strong>$320.00</strong></div>
+    <div class="stat"><p>Очікує зарахування</p><strong>$24.50</strong></div>
+    <div class="stat"><p>Витрачено</p><strong>$150.00</strong></div>
+</div>
+<div class="two-columns">
+    <section class="panel">
+        <h2>Поповнити баланс</h2>
+        <p class="muted">Вкажи суму, яку хочеш додати.</p>
+        <form id="deposit-form" novalidate>
+            <div class="filter-group"><label for="deposit">Сума, $</label><input id="deposit" type="number" min="1" max="1000" step="0.01" placeholder="50.00"></div>
+            <div class="filter-group"><label for="method">Спосіб оплати</label><select id="method"><option>Банківська картка</option><option>Інший спосіб</option></select></div>
+            <button class="button full-width" type="submit">Поповнити</button>
+            <p id="deposit-message" class="form-message" aria-live="polite"></p>
+        </form>
+    </section>
+    <section class="panel">
+        <h2>Вивести кошти</h2>
+        <p class="muted">Вкажи суму та реквізити для отримання коштів.</p>
+        <form>
+            <div class="filter-group"><label for="withdraw">Сума, $</label><input id="withdraw" type="number" placeholder="20.00"></div>
+            <div class="filter-group"><label for="card-number">Номер картки</label><input id="card-number" type="text" placeholder="0000 0000 0000 0000"></div>
+            <button class="button full-width" type="button">Створити заявку</button>
+        </form>
+    </section>
+</div>
+</main>
+<footer class="site-footer">CS2 Market · Маркетплейс скінів Counter-Strike 2</footer>
+</body>
+</html>
